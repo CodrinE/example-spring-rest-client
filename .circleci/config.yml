@@ -1,9 +1,10 @@
-version: 2.1 # use CircleCI 2.0
+version: 2 # use CircleCI 2.0
 jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     branches:
       only:
         - develop # build triggered only if push event occurs to develop branch
+      ignore:
         - master
 
     working_directory: ~/repo # directory where steps will run
