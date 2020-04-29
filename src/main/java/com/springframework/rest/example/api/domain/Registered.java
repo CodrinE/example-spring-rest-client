@@ -10,17 +10,12 @@ import java.util.Map;
 
 @Getter
 @Setter
-public class Login implements Serializable {
+public class Registered implements Serializable {
 
-    public String uuid;
-    public String username;
-    public String password;
-    public String salt;
-    public String md5;
-    public String sha1;
-    public String sha256;
+    public String date;
+    public Integer age;
     private Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = 8279994215325130717L;
+    private final static long serialVersionUID = -3673861857669077174L;
 
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
