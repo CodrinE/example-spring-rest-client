@@ -18,12 +18,4 @@ public class Name implements Serializable {
     private Map<String, Object> additionalProperties = new HashMap<>();
     private final static long serialVersionUID = -8001460831244581976L;
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
 }
