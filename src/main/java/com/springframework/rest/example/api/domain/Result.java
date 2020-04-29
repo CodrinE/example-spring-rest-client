@@ -13,34 +13,49 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "uuid",
-    "username",
-    "password",
-    "salt",
-    "md5",
-    "sha1",
-    "sha256"
+    "gender",
+    "name",
+    "location",
+    "email",
+    "login",
+    "dob",
+    "registered",
+    "phone",
+    "cell",
+    "id",
+    "picture",
+    "nat"
 })
-public class Login implements Serializable
+public class Result implements Serializable
 {
 
-    @JsonProperty("uuid")
-    public String uuid;
-    @JsonProperty("username")
-    public String username;
-    @JsonProperty("password")
-    public String password;
-    @JsonProperty("salt")
-    public String salt;
-    @JsonProperty("md5")
-    public String md5;
-    @JsonProperty("sha1")
-    public String sha1;
-    @JsonProperty("sha256")
-    public String sha256;
+    @JsonProperty("gender")
+    public String gender;
+    @JsonProperty("name")
+    public Name name;
+    @JsonProperty("location")
+    public Location location;
+    @JsonProperty("email")
+    public String email;
+    @JsonProperty("login")
+    public Login login;
+    @JsonProperty("dob")
+    public Dob dob;
+    @JsonProperty("registered")
+    public Registered registered;
+    @JsonProperty("phone")
+    public String phone;
+    @JsonProperty("cell")
+    public String cell;
+    @JsonProperty("id")
+    public Id id;
+    @JsonProperty("picture")
+    public Picture picture;
+    @JsonProperty("nat")
+    public String nat;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-    private final static long serialVersionUID = 8279994215325130717L;
+    private final static long serialVersionUID = 8942009791493839939L;
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {

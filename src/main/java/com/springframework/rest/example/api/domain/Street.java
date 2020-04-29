@@ -13,34 +13,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "uuid",
-    "username",
-    "password",
-    "salt",
-    "md5",
-    "sha1",
-    "sha256"
+    "number",
+    "name"
 })
-public class Login implements Serializable
+public class Street implements Serializable
 {
 
-    @JsonProperty("uuid")
-    public String uuid;
-    @JsonProperty("username")
-    public String username;
-    @JsonProperty("password")
-    public String password;
-    @JsonProperty("salt")
-    public String salt;
-    @JsonProperty("md5")
-    public String md5;
-    @JsonProperty("sha1")
-    public String sha1;
-    @JsonProperty("sha256")
-    public String sha256;
+    @JsonProperty("number")
+    public Integer number;
+    @JsonProperty("name")
+    public String name;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-    private final static long serialVersionUID = 8279994215325130717L;
+    private final static long serialVersionUID = -1396632875888869047L;
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
