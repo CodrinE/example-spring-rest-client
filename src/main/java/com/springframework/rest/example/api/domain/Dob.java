@@ -14,15 +14,6 @@ public class Dob implements Serializable {
 
     public String date;
     public Integer age;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
     private final static long serialVersionUID = -4915420511129144477L;
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
 }

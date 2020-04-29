@@ -12,22 +12,13 @@ import java.util.Map;
 @Setter
 public class Location implements Serializable {
 
-    public Street street;
+    public String street;
     public String city;
     public String state;
-    public String country;
-    public Integer postcode;
+    public String postcode;
     public Coordinates coordinates;
     public Timezone timezone;
     private Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = 6843640969270889872L;
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+    private final static long serialVersionUID = -6045877426323739202L;
 
 }

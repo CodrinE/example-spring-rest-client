@@ -10,18 +10,11 @@ import java.util.Map;
 
 @Getter
 @Setter
-public class Id implements Serializable {
+public class Id implements Serializable
+{
 
     public String name;
-    public Object value;
+    public String value;
     private Map<String, Object> additionalProperties = new HashMap<>();
-    private final static long serialVersionUID = -116905297821311493L;
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+    private final static long serialVersionUID = -6549247506352542291L;
 }
