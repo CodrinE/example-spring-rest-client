@@ -2,6 +2,7 @@
 package com.springframework.rest.example.api.domain;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;

@@ -1,22 +1,28 @@
 package com.springframework.rest.example.services;
 
+import com.springframework.rest.example.SpringRestClientExampleApplication;
 import com.springframework.rest.example.api.domain.Result;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-@SpringBootTest
-class ApiServiceImplTest {
+
+@SpringBootTest(classes = {SpringRestClientExampleApplication.class})
+@RunWith(SpringRunner.class)
+public class ApiServiceImplTest {
+
 
     @Autowired
-    ApiService apiService;
+    public ApiService apiService;
 
     @Test
-    void getUsers() {
+    public void getUsers() {
         List<Result> users = apiService.getUsers(2);
 
         assertEquals(2, users.size());
