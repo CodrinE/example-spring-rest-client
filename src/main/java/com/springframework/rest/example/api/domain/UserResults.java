@@ -20,7 +20,6 @@ import lombok.Setter;
     "info"
 })
 @Getter
-@Setter
 public class UserResults implements Serializable
 {
 
